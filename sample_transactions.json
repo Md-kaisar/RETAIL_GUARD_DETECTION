@@ -1,0 +1,56 @@
+[
+  {
+    "id": "json-txn-001",
+    "timestamp": "2024-04-05T09:15:00",
+    "amount": 199.99,
+    "merchant_id": "M001",
+    "merchant_name": "Amazon",
+    "merchant_category": "E-commerce",
+    "user_id": "CUST2001",
+    "location": "San Francisco",
+    "features": {
+      "is_online": true,
+      "is_foreign": false,
+      "num_txn_last_24h": 2,
+      "avg_txn_amount_30d": 175.00,
+      "distance_from_home": 0,
+      "customer_age_days": 1095
+    }
+  },
+  {
+    "id": "json-txn-002",
+    "timestamp": "2024-04-05T01:42:00",
+    "amount": 8500.00,
+    "merchant_id": "M007",
+    "merchant_name": "Alibaba",
+    "merchant_category": "E-commerce",
+    "user_id": "CUST2002",
+    "location": "Unknown",
+    "features": {
+      "is_online": true,
+      "is_foreign": true,
+      "num_txn_last_24h": 17,
+      "avg_txn_amount_30d": 60.00,
+      "distance_from_home": 11000,
+      "customer_age_days": 4
+    }
+  },
+  {
+    "id": "json-txn-003",
+    "timestamp": "2024-04-05T14:00:00",
+    "amount": 55.00,
+    "merchant_id": "M010",
+    "merchant_name": "Starbucks",
+    "merchant_category": "Coffee",
+    "user_id": "CUST2003",
+    "location": "Boston",
+    "features": {
+      "is_online": false,
+      "is_foreign": false,
+      "num_txn_last_24h": 3,
+      "avg_txn_amount_30d": 50.00,
+      "distance_from_home": 1.2,
+      "customer_age_days": 420
+    }
+  }
+]
