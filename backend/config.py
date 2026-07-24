@@ -1,9 +1,10 @@
+import os
 from pydantic_settings import BaseSettings
 from typing import List
 
 
 class Settings(BaseSettings):
-    MONGO_URL: str = "mongodb://localhost:27017"
+    MONGO_URL: str = os.getenv("MONGO_URI")
     DB_NAME: str = "retailguard"
     SECRET_KEY: str = "retailguard-secret-key"
     ALGORITHM: str = "HS256"

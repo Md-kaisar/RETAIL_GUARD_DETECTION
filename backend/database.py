@@ -1,17 +1,15 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from config import settings
 
-MONGO_URI = "mongodb://localhost:27017"
-DB_NAME = "retailguard"
-
-client: AsyncIOMotorClient = None
+client = None
 db = None
-
 
 async def connect_db():
     global client, db
+
     client = AsyncIOMotorClient(settings.MONGO_URL)
     db = client[settings.DB_NAME]
+
     # Create indexes
     await db.users.create_index("email", unique=True)
     await db.transactions.create_index("id", unique=True)
@@ -20,14 +18,13 @@ async def connect_db():
     await db.cases.create_index("id", unique=True)
     await db.alerts.create_index("id", unique=True)
     await db.audit_logs.create_index([("timestamp", -1)])
-    print("✅ Connected to MongoDB")
 
+    print("✅ Connected to MongoDB")
 
 async def close_db():
     global client
     if client:
         client.close()
-
 
 def get_db():
     return db
